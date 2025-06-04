@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="cover-photo">
+            <img src="<%= user.coverPhoto %>" alt="Cover Photo">
+        </div>
+        <div class="profile-info">
+            <img class="profile-picture" src="<%= user.profilePicture %>" alt="Profile Picture">
+            <h1 class="user-name">
+                <%= user.name %>
+            </h1>
+            <h1>
+                <span class="user-id"> @<%= username %></span>
+            </h1>
+            <p class="bio">
+                <%= user.bio %>
+            </p>
+            <button class="btn">Edit Bio</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="main1">
+
+            <section class="intro">
+                <h2>Intro</h2>
+                <p id="degreeText">
+                    <%= user.education %>
+                </p>
+                <ul id="introList">
+                    <li id="university">
+                        <%= user.details[0].text %>
+                    </li>
+                    <li id="school">
+                        <%= user.details[1].text %>
+                    </li>
+                    <li id="relationship">
+                        <%= user.relationship %>
+                    </li>
+                </ul>
+                <button class="btn" id="editDetailsButton">Edit Details</button>
+            </section>
+
+            <!-- Photos Section -->
+            <section class="photos">
+                <h2>Photos</h2>
+                <div class="photos-grid">
+                    <% for (let i=0; i < Math.min(user.posts.length, 4); i++) { %>
+                        <% if (user.posts[i].image) { %>
+                            <img src="<%= user.posts[i].image %>" alt="Photo">
+                            <% } %>
+                                <% } %>
+                </div>
+            </section>
+        </div>
+
+        <!-- Posts Section -->
+        <section class="posts">
+            <div class="post-outside">
+                <h2>Posts</h2>
+                <button class="add-post" id="openPopup">ADD ✙</button>
+            </div>
+            <section class="posts-inside">
+
+                <% user.posts.forEach(post=> { %>
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="post-header-title">
+
+                                <img src="<%= user.profilePicture %>" alt="Profile Picture"
+                                    class="post-profile-picture">
+                                <div class="post-user-info">
+                                    <h3>
+                                        <%= user.name %>
+                                    </h3>
+                                    <p>Posted on: <span><%= post.post_date %></span></p>
+                                </div>
+                            </div>
+                            <div class="post-id" style="display: none;">
+                                <%= post.id %>
+                            </div>
+                            <div class="post-options">
+                                <div class="post-edit" title="Edit Post">✎</div>
+                                <div class="post-delete" title="Remove Post">❌</div>
+                            </div>
+                        </div>
+                        <% if (post.image) { %>
+                            <img src="<%= post.image %>" alt="Post Image" class="post-image">
+                            <% } %>
+                                <p class="post-text">
+                                    <%= post.post %>
+                                </p>
+                                <div class="post-stats">
+                                    <span>👍 <%= post.likes %></span>
+                                    <span>💬 <%= post.comments %></span>
+                                    <span>🔄 <%= post.shares %></span>
+                                </div>
+                    </div>
+                    <% }) %>
+            </section>
+        </section>
+    </main>
+    <!-- Background Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Edit Bio Modal -->
+    <div id="editBioModal" class="modal">
+        <div class="modal-content">
+            <h3>Edit Profile</h3>
+            <br>
+            <h5>Edit Profile Picture</h5>
+            <input type="text" id="profileInput">
+            <h5>Edit Name</h5>
+            <input type="text" id="nameInput">
+            <h5>Edit Cover Photo</h5>
+            <input type="text" id="coverInput">
+            <h5>Edit Bio</h5>
+            <input type="text" id="bioInput">
+            <div class="modal-buttons">
+                <button id="confirmBio">Confirm</button>
+                <button id="cancelBio">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="editIntroModal" class="modal">
+        <div class="modal-content">
+            <h3>Edit Details</h3>
+
+            <h4>Education</h4>
+            <input type="text" id="degreeInput" placeholder="ex: Computer Engineering">
+            <br>
+            <h4>Detalis</h4>
+            <input type="text" id="universityInput" placeholder="ex: Curruntly working at">
+            <br>
+            <input type="text" id="schoolInput" placeholder="ex: Studied at">
+            <br>
+            <h4>Relationship Status:</h4>
+            <input type="text" id="relationshipInput" placeholder="ex: Single">
+
+            <div class="modal-buttons">
+                <button id="confirmDetails">Confirm</button>
+                <button id="cancelDetails">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h3>⚠️ Delete Post</h3>
+            <p>Are you sure you want to delete this post? This action <b>cannot</b> be undone.</p>
+            <div class="modal-buttons">
+                <button id="cancelDelete">Cancel</button>
+                <button id="confirmDelete" style="background-color: red; color: white;">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupModal" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">❌</span>
+            <br>
+            <h3>Enter Image URL</h3>
+            <input type="text" id="imageUrl" placeholder="Enter Image URL">
+            <div class="popup-buttons">
+                <button id="confirmBtn" style="background-color: #1877f2;">Confirm</button>
+                <button id="cancelBtn" style="background-color: gray;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- edit post -->
+
+    <!-- Edit Post Modal -->
+<div id="editPostModal" class="modal">
+    <div class="modal-content">
+        <h3>Edit Post</h3>
+        <br>
+        <h5>Edit Image URL</h5>
+        <input type="text" id="editImageUrl" placeholder="Enter Image URL">
+        <h5>Edit Post Date</h5>
+        <input type="date" id="editPostDate">
+        <div class="modal-buttons">
+            <button id="confirmEditPost">Confirm</button>
+            <button id="cancelEditPost">Cancel</button>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="/script.js"></script>
+
+</html>

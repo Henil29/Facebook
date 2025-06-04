@@ -1,0 +1,438 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+header {
+    text-align: center;
+    background-color: white;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+}
+
+.profile-info {
+    margin-top: -50px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.profile-picture {
+    background-color: white;
+    border-radius: 50%;
+    border: 4px solid rgb(0, 0, 0);
+    height: 100px;
+    width: 100px;
+    
+}
+
+.bio {
+    font-style: italic;
+    color: gray;
+}
+.main1{
+    display: flex;
+    margin-top: 20px;
+}
+.intro{
+    flex: 1;
+    height: fit-content;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+.photos{
+    flex: 2;
+}
+.intro, .photos, .posts {
+    background-color: white;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.intro h2, .photos h2, .posts h2 {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.photos-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.posts {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column; 
+    gap:20px;
+}
+.post-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+.post-outside{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-outside button{
+    height: 40px;
+    width: 100px;
+    background-color: #1877f2;
+    padding: 4px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+}
+.posts-inside{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 20px;
+}
+
+.post {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* width: fit-content; */
+    width: 90%;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.post-header-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.post .post-delete,.post-edit{
+    cursor: pointer;
+}
+
+.post-profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-user-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.post-user-info p {
+    margin: 0;
+    color: gray;
+    font-size: 12px;
+}
+
+.post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.post-text {
+    margin: 10px 0;
+}
+
+.post-stats {
+    display: flex;
+    justify-content: space-around;
+    color: gray;
+    font-size: 14px;
+    user-select: none;
+}
+@media screen and (max-width: 768px) {
+    .main1{
+        flex-direction: column;
+    }
+    .posts-inside{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+/* Background Overlay (to darken the background) */
+#overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Ensures it covers everything */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 500px;
+    /* height: 300px; */
+    text-align: center;
+    z-index: 1000; /* Above the overlay */
+}
+
+.modal-content h3 {
+    margin-bottom: 10px;
+}
+
+.modal input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
+
+.modal-buttons button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#confirmBio {
+    background-color: #1877f2;
+    color: white;
+}
+
+#cancelBio {
+    background-color: gray;
+    color: white;
+    margin: 0 12px;
+}
+
+/* Disable scrolling when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Edit Details Modal */
+#editDetailsModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 500px;
+    text-align: center;
+    z-index: 1000;
+}
+.modal-content h4{
+    text-align: left;
+    margin-left: 17px;
+    margin-bottom: 5px;
+}
+.modal input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+#confirmDetails {
+    background-color: #1877f2;
+    color: white;
+}
+
+#cancelDetails {
+    background-color: gray;
+    color: white;
+    margin-left: 12px;
+}
+
+#deleteModal .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#deleteModal .modal-buttons button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#deleteModal #confirmDelete {
+    background: red;
+    color: white;
+}
+
+#deleteModal #cancelDelete {
+    background: gray;
+    color: white;
+    margin-right: 10px;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+.popup-content input{
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.popup-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.popup-buttons button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    color: white;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    /* font-size: 12px; */
+}
+
+
+/* edit post */
+
+
+/* Edit Post Modal Styles */
+#editPostModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    z-index: 1000;
+}
+
+#editPostModal input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#editPostModal .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+#editPostModal .modal-buttons button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#confirmEditPost {
+    background-color: #1877f2;
+    color: white;
+}
+
+#cancelEditPost {
+    background-color: gray;
+    color: white;
+    margin-left: 12px;
+}

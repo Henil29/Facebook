@@ -1,0 +1,200 @@
+{
+  "henil29": {
+    "name": "Henil29",
+    "profilePicture": "https://media-hosting.imagekit.io//a4e35030f3c94a7d/my1.1.jpg?Expires=1835095950&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=aU6JqOAFvAHPUu02v1uhhctMKO-cnYWNRcRgNNaHt2chBY0Yt6kotWujnYy4RjKR5YQ-fG8vt1Nk-CfCMqafdYe-Sl40iNjGDrb2UGJnsFeDDpObhdV4a4v6QrtmBQVOudtNbzFqghD2sI6Eftp7FucLcAYaTadAf9rILZ0POVVXmlle466uIXw9aOCFL9a0YVzERAu0l1aL0IUJcf0d6V~HAIYA6TZRQp3-SwhNyfhKFTJu-drPtt6yFhOCweqyKcsg8nxOGApXuFjhWW5C2R2ktlKY7F5pL0t1R6Q5HR8wJAMNxNxwTd-Ur6eylqBV114b92deMnycj4KJtJk9Pw__",
+    "coverPhoto": "https://images.pexels.com/photos/1612351/pexels-photo-1612351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "bio": "i am software developer with a passion for building scalable and efficient systems.",
+    "education": "Computer Engineering",
+    "details": [
+      {
+        "text": "Studied at LJ University"
+      },
+      {
+        "text": "Went to Akshar Purushottam Swaminarayan Gurukul"
+      }
+    ],
+    "relationship": "💖single",
+    "posts": [
+      {
+        "id": 1,
+        "text": "This is post 1",
+        "image": "https://i.pravatar.cc/150?u=0.47286469986975144",
+        "likes": 200,
+        "comments": 17,
+        "shares": 82,
+        "post_date": "2017-04-09"
+      },
+      {
+        "id": 3,
+        "text": "This is post 3",
+        "image": "https://i.pravatar.cc/150?u=0.47286469986975205",
+        "likes": 300,
+        "comments": 30,
+        "shares": 50,
+        "post_date": "2017-04-09"
+      },
+      {
+        "id": 4,
+        "text": "This is post 4",
+        "image": "https://i.pravatar.cc/150?u=0.47286469986975206",
+        "likes": 400,
+        "comments": 40,
+        "shares": 60,
+        "post_date": "2017-04-12"
+      },
+      {
+        "id": 5,
+        "text": "This is post 5",
+        "image": "https://i.pravatar.cc/150?u=0.47286469986975207",
+        "likes": 500,
+        "comments": 50,
+        "shares": 70,
+        "post_date": "2017-04-12"
+      }
+    ]
+  },
+  "gojo": {
+    "name": "gojo saturo",
+    "profilePicture": "https://wallpapers.com/images/high/purple-lightning-gojo-satoru-6iy21icke1gtvvna.webp",
+    "coverPhoto": "https://wallpapers.com/images/featured-full/jujutsu-kaisen-4k-hccbh0fp7rl24yd0.jpg",
+    "bio": "we will outstretch the hand if you unclench your fist.",
+    "education": "Computer Engineering",
+    "details": [
+      {
+        "text": "Studied at LJ University"
+      },
+      {
+        "text": "Went to Akshar Purushottam Swaminarayan Gurukul"
+      }
+    ],
+    "relationship": "❤️ single",
+    "posts": [
+      {
+        "id": 1,
+        "text": "This is post 1",
+        "image": "https://i.pravatar.cc/150?u=0.07578774521298981",
+        "likes": 9,
+        "comments": 99,
+        "shares": 6,
+        "post_date": "2016-05-25"
+      },
+      {
+        "id": 2,
+        "text": "This is post 2",
+        "image": "https://i.pravatar.cc/150?u=0.4774369784054866",
+        "likes": 2,
+        "comments": 43,
+        "shares": 58,
+        "post_date": "2014-06-21"
+      },
+      {
+        "id": 3,
+        "text": "This is post 3",
+        "image": "https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg",
+        "likes": 97,
+        "comments": 20,
+        "shares": 77,
+        "post_date": "2025-02-09"
+      }
+    ]
+  },
+  "bmw": {
+    "name": "BMW",
+    "profilePicture": "https://scontent.famd1-1.fna.fbcdn.net/v/t39.30808-6/443733547_845306174296825_5442883183940269087_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=h8DlfaVOMN4Q7kNvgHBbkDu&_nc_oc=Adj_mJTlD1zmAqBkwpLPPBZPo-e5_6Nwg3urYLjnXr5KzAkCKItaE9eE0cnm7cnteuAeVWq-Q2NP8l_ueY8y0Wq5&_nc_zt=23&_nc_ht=scontent.famd1-1.fna&_nc_gid=AZVXSj_sCMuFCjSfAocHeDe&oh=00_AYAO0mQpUxoCtGrofV3A7H3REVhqPrB3EfxP_917sRD3Qg&oe=67C3970F",
+    "coverPhoto": "https://scontent.famd1-1.fna.fbcdn.net/v/t39.30808-6/476455172_1034148052079302_2589953116335481455_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=6s-TSQdvq4MQ7kNvgGpM-cL&_nc_oc=Adis39mCXN1XcCTQ9-N4Q9r91W7DFf4wWDBeUV_wSITRuQJ2qV7wllsxaZDL_Mh2RoRTC0kKTvhfbyIIs492slsK&_nc_zt=23&_nc_ht=scontent.famd1-1.fna&_nc_gid=Ae8bof79I8wRKxSvc3rpUpz&oh=00_AYCYtj57O81E5EQxIXypHmg4BH_XUPA-JrksBdMKkIT7og&oe=67C37F23",
+    "bio": "welcome to the official bmw facebook page! get the latest information about sheer driving pleasure.",
+    "education": "Facebook is showing information to help you understand the purpose of this Page.",
+    "details": [
+      {
+        "text": "Made in India"
+      },
+      {
+        "text": "Ahmedabad,Gujarat"
+      }
+    ],
+    "relationship": "Relationship with customer",
+    "posts": [
+      {
+        "id": 1,
+        "text": "This is post 1",
+        "image": "https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "likes": 12,
+        "comments": 56,
+        "shares": 66,
+        "post_date": "2015-03-02"
+      },
+      {
+        "id": 2,
+        "text": "This is post 2",
+        "image": "https://images.pexels.com/photos/2127012/pexels-photo-2127012.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "likes": 68,
+        "comments": 28,
+        "shares": 76,
+        "post_date": "2010-05-10"
+      },
+      {
+        "id": 3,
+        "text": "This is post 3",
+        "image": "https://images.pexels.com/photos/16555016/pexels-photo-16555016/free-photo-of-white-bmw-m4.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "likes": 82,
+        "comments": 72,
+        "shares": 69,
+        "post_date": "2016-01-23"
+      },
+      {
+        "id": 4,
+        "text": "This is post 4",
+        "image": "https://images.pexels.com/photos/19948849/pexels-photo-19948849/free-photo-of-bmw-m4-at-the-2023-fanatec-world-gt-challenge-europe.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "likes": 25,
+        "comments": 11,
+        "shares": 13,
+        "post_date": "2010-12-07"
+      }
+    ]
+  },
+  "ferrari": {
+    "name": "Ferrari",
+    "profilePicture": "https://scontent.fstv8-1.fna.fbcdn.net/v/t39.30808-1/354261345_642428017920712_3319775015072719968_n.png?stp=dst-png_s200x200&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=4rpE1R2PTnoQ7kNvgGOJwD9&_nc_oc=AdjkKWqGVSaaE1Y_4MCOVnZc7QXABlNvTvVyD5DRGm7GOlE3MwNLEwrR4HSIH_16PtSSdjjSBE7EnAXfx5rSOSeA&_nc_zt=24&_nc_ht=scontent.fstv8-1.fna&_nc_gid=AI_MJZLp7_ogp-bR91T03SZ&oh=00_AYDFuuD7lx2zMUgmkKz192luhVBdxx3aD0CQxRn8--hGmg&oe=67C71979",
+    "coverPhoto": "https://scontent.fstv8-2.fna.fbcdn.net/v/t39.30808-6/463208940_946034030893441_4962461028120157818_n.png?stp=dst-png_s960x960&_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=YJRCAnvocEEQ7kNvgFlxWci&_nc_oc=AdjqJMZD1wKH4ZO8LyStrqQzbVO6YPquTEjFz2k38YzNgrJffCY83adLcROftrVz2S5JFNJu3eiltNC4NbS9LsY5&_nc_zt=23&_nc_ht=scontent.fstv8-2.fna&_nc_gid=AI_MJZLp7_ogp-bR91T03SZ&oh=00_AYA63TOys1TgeMk1j5340osTMGMqAe2zaTv24p4FK7RWVw&oe=67C721A2",
+    "bio": "the ferrari official facebook page. since 1947, italian excellence that makes the world dream.",
+    "education": "Enter your details here",
+    "details": [
+      {
+        "text": "Enter your details here"
+      },
+      {
+        "text": "Enter your details here"
+      }
+    ],
+    "relationship": "Enter your Relationship here",
+    "posts": [
+      {
+        "id": 1,
+        "text": "This is post 1",
+        "image": "https://images.unsplash.com/photo-1592198084033-aade902d1aae?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "likes": 96,
+        "comments": 97,
+        "shares": 81,
+        "post_date": "2025-02-28"
+      },
+      {
+        "id": 2,
+        "text": "This is post 2",
+        "image": "https://images.unsplash.com/photo-1655593972695-919eb269b0df?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "likes": 35,
+        "comments": 70,
+        "shares": 82,
+        "post_date": "2025-02-28"
+      },
+      {
+        "id": 3,
+        "text": "This is post 3",
+        "image": "https://images.pexels.com/photos/30599907/pexels-photo-30599907/free-photo-of-bright-red-ferrari-in-ankara-parking-lot.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "likes": 39,
+        "comments": 96,
+        "shares": 78,
+        "post_date": "2025-02-28"
+      }
+    ]
+  }
+}
